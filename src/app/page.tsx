@@ -8,10 +8,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-// Disable static optimization for this page
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">

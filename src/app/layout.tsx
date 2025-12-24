@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+// import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Providers } from "@/components/providers";
 import './globals.css'
 
@@ -11,10 +11,6 @@ export const metadata: Metadata = {
   title: 'HVAC Services',
   description: 'Professional HVAC services for your home and business',
 }
-
-// Disable static optimization for the entire app
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
 
 export default function RootLayout({
   children,
@@ -27,7 +23,7 @@ export default function RootLayout({
         <Providers>
           {children}
           <Toaster />
-          <Sonner />
+          {/* <Sonner /> */}
         </Providers>
       </body>
     </html>

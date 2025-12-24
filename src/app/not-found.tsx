@@ -1,10 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-
-// Disable static optimization for this page
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
  
 export default function NotFound() {
   return (
