@@ -24,14 +24,12 @@ const HeroSection = () => {
           {/* Headline */}
           <div className="space-y-6 animate-fade-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-foreground px-2 sm:px-0">
-              Professional AC Services
-              <span className="block sm:inline"><br className="hidden sm:block" /></span>
-              <span className="gradient-text">For Every Space</span>
+              <span className="gradient-text">Air Conditioner Service and Repair</span>
             </h1>
             
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
-              Expert installation, repair, and maintenance services. 
-              Trusted by thousands of homes and businesses for reliable climate control.
+              From emergency repairs to complete system installations, we deliver reliable climate control 
+              solutions with 24/7 support. Trusted by 15,000+ customers across the metro area.
             </p>
           </div>
           
