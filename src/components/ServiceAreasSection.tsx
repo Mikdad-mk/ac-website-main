@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 
 const ServiceAreasSection = () => {
   const serviceAreas = [
-    { city: "Downtown", zip: "12345", responseTime: "15 min" },
-    { city: "Westside", zip: "12346", responseTime: "20 min" },
-    { city: "Eastside", zip: "12347", responseTime: "25 min" },
-    { city: "Northside", zip: "12348", responseTime: "20 min" },
-    { city: "Southside", zip: "12349", responseTime: "25 min" },
-    { city: "Suburbs", zip: "12350", responseTime: "30 min" }
+    { city: "Petaling Jaya", zip: "47xxx", responseTime: "15 min" },
+    { city: "Kuala Lumpur", zip: "50xxx", responseTime: "25 min" },
+    { city: "Shah Alam", zip: "40xxx", responseTime: "30 min" },
+    { city: "Subang Jaya", zip: "47xxx", responseTime: "20 min" },
+    { city: "Puchong", zip: "47xxx", responseTime: "35 min" },
+    { city: "Klang", zip: "41xxx", responseTime: "40 min" }
   ];
 
   return (
@@ -26,12 +26,12 @@ const ServiceAreasSection = () => {
             </div>
             
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-foreground animate-fade-up">
-              Areas We Serve
+              Aircond Service Areas in Malaysia
             </h2>
             
             <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-up">
-              We proudly serve the greater metropolitan area with fast, reliable HVAC services. 
-              Check if we service your area and see our typical response times.
+              We provide professional air conditioning services across Klang Valley, Selangor and Kuala Lumpur. 
+              Fast response times and reliable aircond repair services in your area.
             </p>
           </div>
 

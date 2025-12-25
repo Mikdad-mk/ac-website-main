@@ -3,22 +3,22 @@ import { Snowflake, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 const Footer = () => {
   const footerLinks = {
     services: [
-      { name: "AC Installation", href: "#" },
-      { name: "Repair & Maintenance", href: "#" },
-      { name: "AC Replacement", href: "#" },
-      { name: "Duct Services", href: "#" },
+      { name: "Aircond Installation", href: "#" },
+      { name: "Aircond Repair", href: "#" },
+      { name: "Aircond Cleaning", href: "#" },
+      { name: "Gas Top Up Service", href: "#" },
     ],
     company: [
       { name: "About Us", href: "#" },
-      { name: "Our Team", href: "#" },
-      { name: "Careers", href: "#" },
+      { name: "Service Areas", href: "#" },
+      { name: "Emergency Service", href: "#" },
       { name: "Contact", href: "#contact" },
     ],
     support: [
-      { name: "Help Center", href: "#" },
-      { name: "FAQs", href: "#" },
+      { name: "24/7 Support", href: "#" },
       { name: "Warranty Info", href: "#" },
-      { name: "Service Areas", href: "#" },
+      { name: "Maintenance Plans", href: "#" },
+      { name: "Free Quotation", href: "#" },
     ],
   };
 
@@ -41,11 +41,12 @@ const Footer = () => {
               <span className="text-lg font-semibold text-foreground">CoolAir</span>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
-              Professional air conditioning service and repair solutions.
+              Professional aircond service & repair solutions across Malaysia.
             </p>
             <div className="text-sm text-muted-foreground mb-4">
               <div>📞 +60 12-274 2875</div>
               <div>✉️ servicecoolcare73@gmail.com</div>
+              <div>📍 Petaling Jaya, Selangor, Malaysia</div>
             </div>
             <div className="flex gap-2">
               {socialLinks.map((social) => (

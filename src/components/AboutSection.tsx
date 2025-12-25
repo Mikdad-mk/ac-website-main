@@ -27,30 +27,30 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-24 bg-background relative">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="about" className="mobile-padding bg-background relative">
+      <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-            About CoolAir
+          <h2 className="text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
+            About CoolAir Malaysia
           </h2>
           
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
-            Professional air conditioning service company providing reliable installation, 
-            repair, and maintenance for residential and commercial clients.
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12">
+            Leading air conditioning service provider in Petaling Jaya, Selangor. We specialize in aircond repair, 
+            installation, and maintenance for residential and commercial properties across Klang Valley, Malaysia.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
             {features.map((feature, index) => (
               <div 
                 key={feature.title}
-                className="text-center"
+                className="text-center p-4 sm:p-0"
               >
-                <div className="icon-box mx-auto mb-4">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="icon-box mx-auto mb-3 sm:mb-4">
+                  <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground text-sm mb-2">{feature.title}</h4>
-                <p className="text-xs text-muted-foreground">{feature.description}</p>
+                <h4 className="font-semibold text-foreground text-sm sm:text-base mb-1 sm:mb-2">{feature.title}</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>

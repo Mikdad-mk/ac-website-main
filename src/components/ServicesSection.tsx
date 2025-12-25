@@ -3,33 +3,33 @@ import { Wind, Wrench, Thermometer, RefreshCw, Cog, ShieldCheck } from "lucide-r
 const services = [
   {
     icon: Wind,
-    title: "AC Installation",
-    description: "Professional installation of all AC types with expert precision and care.",
+    title: "Aircond Installation",
+    description: "Professional installation of split unit, window & central air conditioning systems.",
   },
   {
     icon: Wrench,
-    title: "Repair Services",
-    description: "Fast and reliable repairs to keep your system running smoothly.",
+    title: "Aircond Repair Services",
+    description: "Fast and reliable repair for all aircond brands - Daikin, Mitsubishi, Panasonic, LG.",
   },
   {
     icon: Thermometer,
-    title: "Climate Control",
-    description: "Smart thermostat installation and home automation integration.",
+    title: "Aircond Gas Top Up",
+    description: "R410A and R32 refrigerant gas refill service with leak detection and repair.",
   },
   {
     icon: RefreshCw,
-    title: "AC Replacement",
-    description: "Upgrade to energy-efficient systems and save on bills.",
+    title: "Aircond Replacement",
+    description: "Upgrade to energy-efficient 5-star inverter aircond systems and save on electricity.",
   },
   {
     icon: Cog,
-    title: "Duct Services",
-    description: "Complete duct cleaning, repair, and installation services.",
+    title: "Aircond Cleaning Service",
+    description: "Chemical wash, general service, and maintenance for optimal performance.",
   },
   {
     icon: ShieldCheck,
-    title: "Maintenance Plans",
-    description: "Annual maintenance packages for worry-free cooling.",
+    title: "Aircond Maintenance",
+    description: "Regular servicing packages to extend aircond lifespan and prevent breakdowns.",
   },
 ];
 
