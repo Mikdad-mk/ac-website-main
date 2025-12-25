@@ -61,19 +61,7 @@ const ServiceAreasSection = () => {
             ))}
           </div>
 
-          {/* Coverage Info */}
-          <div className="clean-card p-8 text-center animate-fade-up">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">
-              Don&apos;t See Your Area Listed?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              We&apos;re constantly expanding our service coverage. Contact us to check if we can serve your location.
-            </p>
-            <Button variant="hero" size="lg">
-              <Phone className="w-5 h-5" />
-              Check Service Availability
-            </Button>
-          </div>
+
 
         </div>
       </div>
