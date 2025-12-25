@@ -54,6 +54,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
 
@@ -206,12 +210,86 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* WhatsApp Button Mobile Fix */
-  .whatsapp-button {
+  /* WhatsApp Floating Button */
+  .floating-whatsapp-btn {
     position: fixed !important;
-    bottom: 1rem !important;
-    right: 1rem !important;
-    z-index: 9999 !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    z-index: 999999 !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #25D366 !important;
+    border-radius: 50% !important;
+    border: none !important;
     display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .floating-whatsapp-btn:hover {
+    background-color: #128C7E !important;
+    transform: scale(1.05) !important;
+  }
+
+  .whatsapp-icon {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+  }
+
+  /* Responsive sizing for different screen sizes */
+  @media screen and (max-width: 480px) {
+    .floating-whatsapp-btn {
+      bottom: 12px !important;
+      right: 12px !important;
+      width: 45px !important;
+      height: 45px !important;
+    }
+    .whatsapp-icon {
+      width: 22px !important;
+      height: 22px !important;
+    }
+  }
+
+  /* Extra small devices (very small phones) */
+  @media screen and (max-width: 360px) {
+    .floating-whatsapp-btn {
+      bottom: 10px !important;
+      right: 10px !important;
+      width: 42px !important;
+      height: 42px !important;
+    }
+    .whatsapp-icon {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+
+  /* Ultra small devices */
+  @media screen and (max-width: 320px) {
+    .floating-whatsapp-btn {
+      bottom: 8px !important;
+      right: 8px !important;
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .whatsapp-icon {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+
+  /* Ensure no overflow issues hide the button */
+  body {
+    position: relative !important;
+  }
+  
+  html, body {
+    overflow-x: hidden !important;
   }
 }
