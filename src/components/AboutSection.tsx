@@ -71,8 +71,8 @@ const AboutSection = () => {
             {/* Image */}
             <div className="relative mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1621905252472-e8ace8b05de8?w=600&h=400&fit=crop"
-                alt="HVAC Professional at Work"
+                src="public/about image.png"
+                alt=""
                 className="w-full h-80 object-cover rounded-2xl"
               />
             </div>
