@@ -22,17 +22,17 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "123 Cool Street, AC City, ST 12345",
+      content: "NO. 4-5-16, CEMPAKA 4, JALAN CECAWI, SEKSYEN 6/19, KOTA DAMANSARA, 47810 PETALING JAYA",
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "1-800-COOL-AIR",
+      content: "+60 12-274 2875",
     },
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@coolair.com",
+      content: "servicecoolcare73@gmail.com",
     },
     {
       icon: Clock,

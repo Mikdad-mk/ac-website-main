@@ -41,8 +41,12 @@ const Footer = () => {
               <span className="text-lg font-semibold text-foreground">CoolAir</span>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
-              Premium air conditioning solutions for homes and businesses.
+              Professional air conditioning service and repair solutions.
             </p>
+            <div className="text-sm text-muted-foreground mb-4">
+              <div>📞 +60 12-274 2875</div>
+              <div>✉️ servicecoolcare73@gmail.com</div>
+            </div>
             <div className="flex gap-2">
               {socialLinks.map((social) => (
                 <a

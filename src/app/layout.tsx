@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Providers } from "@/components/providers";
 import './globals.css'
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           {children}
+          <WhatsAppButton />
           <Toaster />
           <Sonner />
         </Providers>
