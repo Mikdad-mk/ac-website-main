@@ -1,76 +1,64 @@
-import { Snowflake, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Snowflake } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
-  const footerLinks = {
-    services: [
-      { name: "Aircond Installation", href: "#" },
-      { name: "Aircond Repair", href: "#" },
-      { name: "Aircond Cleaning", href: "#" },
-      { name: "Gas Top Up Service", href: "#" },
-    ],
-    company: [
-      { name: "About Us", href: "#" },
-      { name: "Service Areas", href: "#" },
-      { name: "Emergency Service", href: "#" },
-      { name: "Contact", href: "#contact" },
-    ],
-    support: [
-      { name: "24/7 Support", href: "#" },
-      { name: "Warranty Info", href: "#" },
-      { name: "Maintenance Plans", href: "#" },
-      { name: "Free Quotation", href: "#" },
-    ],
-  };
+  const menuLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Service Areas", href: "#service-areas" },
+    { name: "Blog", href: "#" },
+    { name: "Shop", href: "#" },
+  ];
 
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+  const utilityPages = [
+    { name: "Style Guide", href: "#" },
+    { name: "Start Here", href: "#" },
+    { name: "Password", href: "#" },
+    { name: "404 Not Found", href: "#" },
+    { name: "Licenses", href: "#" },
+    { name: "Changelog", href: "#" },
   ];
 
   return (
-    <footer className="bg-card border-t border-border pt-12 sm:pt-16 pb-8">
-      <div className="container mx-auto px-4 sm:px-6">
-        {/* Main Footer */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-4 group">
+    <footer className="bg-card border-t border-border py-12 lg:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12">
+          
+          {/* Brand Section */}
+          <div>
+            <a href="#home" className="inline-flex items-center gap-2 mb-4 group">
               <Snowflake className="w-6 h-6 text-primary transition-transform duration-500 group-hover:rotate-180" />
-              <span className="text-lg font-semibold text-foreground">CoolAir</span>
+              <span className="text-xl font-semibold text-foreground">CoolAir</span>
             </a>
-            <p className="text-sm text-muted-foreground mb-4">
-              Professional aircond service & repair solutions across Malaysia.
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div className="text-sm text-muted-foreground mb-4">
-              <div>📞 +60 12-274 2875</div>
-              <div>✉️ servicecoolcare73@gmail.com</div>
-              <div>📍 Petaling Jaya, Selangor, Malaysia</div>
-            </div>
+            {/* Social Icons */}
             <div className="flex gap-2">
-              {socialLinks.map((social) => (
+              {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
                 <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                  key={social}
+                  href="#"
+                  className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 >
-                  <social.icon className="w-4 h-4" />
+                  <span className="text-xs font-bold">{social[0].toUpperCase()}</span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Services */}
+          {/* Menu Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground text-sm">Services</h4>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+            <h4 className="font-semibold mb-4 text-foreground">Menu</h4>
+            <ul className="space-y-3">
+              {menuLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -79,15 +67,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Utility Pages */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground text-sm">Company</h4>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
+            <h4 className="font-semibold mb-4 text-foreground">Utility pages</h4>
+            <ul className="space-y-3">
+              {utilityPages.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -96,34 +84,42 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Subscribe */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground text-sm">Support</h4>
-            <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
+            <h4 className="font-semibold mb-4 text-foreground">Subscribe for our newsletter</h4>
+            <div className="space-y-4">
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 text-sm border border-border rounded-l-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+                <Button 
+                  size="sm" 
+                  className="rounded-l-none px-4"
+                  asChild
+                >
                   <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    href="https://wa.me/60122742875"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {link.name}
+                    Subscribe
                   </a>
-                </li>
-              ))}
-            </ul>
+                </Button>
+              </div>
+            </div>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 CoolAir. All rights reserved.
+            Copyright © CoolAir | Designed by <span className="text-primary">HVAC Templates</span> | Powered by <span className="text-primary">WebFlow</span>
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-          </div>
         </div>
+        
       </div>
     </footer>
   );

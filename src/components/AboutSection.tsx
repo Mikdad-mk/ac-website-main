@@ -1,58 +1,117 @@
 'use client'
 
-import { Award, Users, Clock, Shield } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const AboutSection = () => {
-  const features = [
+  const [expandedCard, setExpandedCard] = useState<string | null>("mission");
+
+  const cards = [
     {
-      icon: Award,
-      title: "Licensed & Certified",
-      description: "EPA certified technicians"
+      id: "mission",
+      title: "Our Mission",
+      content: "With years of experience in the industry, our team of skilled professionals is dedicated to delivering top HVAC services prioritizing durability, quality, and safety. We take pride in our craftsmanship."
     },
     {
-      icon: Users,
-      title: "Experienced Team",
-      description: "Professional service technicians"
+      id: "vision", 
+      title: "Our Vision",
+      content: "To be Malaysia's leading HVAC service provider, setting the standard for excellence in air conditioning repair, installation, and maintenance across the region."
     },
     {
-      icon: Clock,
-      title: "Reliable Service",
-      description: "Prompt and dependable"
-    },
-    {
-      icon: Shield,
-      title: "Quality Guarantee",
-      description: "All work guaranteed"
+      id: "values",
+      title: "Our Values",
+      content: "We believe in transparency, reliability, and customer satisfaction. Every project is approached with integrity and commitment to delivering exceptional results."
     }
   ];
 
-  return (
-    <section id="about" className="mobile-padding bg-background relative">
-      <div className="container">
-        <div className="max-w-4xl mx-auto text-center">
-          
-          <h2 className="text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
-            About CoolAir Malaysia
-          </h2>
-          
-          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12">
-            Leading air conditioning service provider in Petaling Jaya, Selangor. We specialize in aircond repair, 
-            installation, and maintenance for residential and commercial properties across Klang Valley, Malaysia.
-          </p>
+  const toggleCard = (cardId: string) => {
+    setExpandedCard(expandedCard === cardId ? null : cardId);
+  };
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.title}
-                className="text-center p-4 sm:p-0"
+  return (
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-background">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Content */}
+          <div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+              <span className="text-sm font-medium text-primary uppercase tracking-wide">About Us</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
+              Transforming Homes with Quality HVAC Solutions
+            </h2>
+            
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              From repairs to full AC system replacements, we treat each home as our own, providing personalized solutions 
+              tailored to meet the unique needs of our clients.
+            </p>
+
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg font-semibold"
+              asChild
+            >
+              <a
+                href="https://wa.me/60122742875"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div className="icon-box mx-auto mb-3 sm:mb-4">
-                  <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                Learn More
+              </a>
+            </Button>
+          </div>
+
+          {/* Right Content */}
+          <div className="space-y-4">
+            {/* Image */}
+            <div className="relative mb-8">
+              <img 
+                src="https://images.unsplash.com/photo-1621905252472-e8ace8b05de8?w=600&h=400&fit=crop"
+                alt="HVAC Professional at Work"
+                className="w-full h-80 object-cover rounded-2xl"
+              />
+            </div>
+
+            {/* Expandable Cards */}
+            <div className="space-y-4">
+              {cards.map((card) => (
+                <div 
+                  key={card.id}
+                  className={`rounded-2xl border transition-all duration-300 ${
+                    expandedCard === card.id 
+                      ? 'bg-primary text-primary-foreground border-primary' 
+                      : 'bg-card border-border hover:border-primary/50'
+                  }`}
+                >
+                  <button
+                    onClick={() => toggleCard(card.id)}
+                    className="w-full p-6 flex items-center justify-between text-left"
+                  >
+                    <h3 className="text-lg font-semibold">
+                      {card.title}
+                    </h3>
+                    {expandedCard === card.id ? (
+                      <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                    )}
+                  </button>
+                  
+                  {expandedCard === card.id && (
+                    <div className="px-6 pb-6">
+                      <p className="leading-relaxed opacity-90">
+                        {card.content}
+                      </p>
+                    </div>
+                  )}
                 </div>
-                <h4 className="font-semibold text-foreground text-sm sm:text-base mb-1 sm:mb-2">{feature.title}</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
         </div>

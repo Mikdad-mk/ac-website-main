@@ -18,30 +18,42 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+        <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <Snowflake className="w-6 h-6 text-primary transition-transform duration-500 group-hover:rotate-180" />
-            <span className="text-lg font-semibold text-foreground">CoolAir</span>
+            <Snowflake className="w-7 h-7 text-primary transition-transform duration-500 group-hover:rotate-180" />
+            <span className="text-lg lg:text-xl font-bold text-foreground">CoolAir</span>
           </a>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm lg:text-base font-medium relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Get Started
+            <Button
+              variant="hero"
+              size="default"
+              className="px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base font-semibold hover:bg-primary/90 transition-colors"
+              asChild
+            >
+              <a
+                href="https://wa.me/60122742875"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Started
+              </a>
             </Button>
           </div>
 
@@ -57,21 +69,32 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border animate-fade-up">
-            <div className="container py-4 flex flex-col gap-2">
+          <div className="md:hidden absolute top-16 lg:top-18 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border animate-fade-up shadow-lg">
+            <div className="container py-4 flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors py-2 text-sm font-medium"
+                  className="text-foreground hover:text-primary transition-colors py-2 text-sm font-medium border-b border-border/50 last:border-b-0"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-border">
-                <Button variant="hero" className="w-full" size="sm">
-                  Get Started
+              <div className="pt-3">
+                <Button
+                  variant="hero"
+                  className="w-full py-3 text-sm font-semibold hover:bg-primary/90 transition-colors"
+                  size="default"
+                  asChild
+                >
+                  <a
+                    href="https://wa.me/60122742875"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Started
+                  </a>
                 </Button>
               </div>
             </div>
