@@ -35,7 +35,7 @@ const services = [
     icon: ShieldCheck,
     title: "Aircond Maintenance",
     description: "Regular servicing packages to extend aircond lifespan and prevent costly breakdowns.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop"
+    image: "/our-service/image8.png"
   },
 ];
 

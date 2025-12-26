@@ -53,7 +53,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                Schedule AC Repair
+                Contact us
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
@@ -97,7 +97,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  Schedule AC Repair
+                  Contact us
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
@@ -108,7 +108,7 @@ const HeroSection = () => {
           {/* Right Image */}
           <div className="relative flex items-center justify-end">
             <div className="relative w-full max-w-none">
-              <div className="relative rounded-3xl overflow-hidden h-[65vh]">
+              <div className="relative  overflow-hidden h-[65vh]">
                 <img
                   src="/hero section image.png"
                   alt="HVAC Service"
