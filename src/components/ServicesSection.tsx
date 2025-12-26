@@ -1,4 +1,8 @@
+'use client'
+
 import { Wind, Wrench, Thermometer, RefreshCw, Cog, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { useScrollAnimation, fadeInUp, staggerContainer } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -40,26 +44,37 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const { ref, isInView } = useScrollAnimation();
+
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-background">
+    <motion.section 
+      id="services" 
+      className="py-16 sm:py-20 lg:py-24 bg-background"
+      ref={ref}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+      variants={staggerContainer}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-16">
+        <motion.div className="text-center mb-12 lg:mb-16" variants={fadeInUp}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Our Services
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.
+            Comprehensive HVAC solutions for your home and business. From installation to maintenance, we provide professional air conditioning services across Klang Valley.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid - 3x2 layout like the reference */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service) => (
-            <div
+          {services.map((service, index) => (
+            <motion.div
               key={service.title}
               className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-md transition-shadow duration-300"
+              variants={fadeInUp}
+              transition={{ delay: index * 0.1 }}
             >
               {/* Service Image */}
               <div className="relative h-48 bg-muted">
@@ -86,11 +101,11 @@ const ServicesSection = () => {
                   View Service →
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

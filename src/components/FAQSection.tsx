@@ -2,9 +2,12 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { useScrollAnimation, fadeInUp, staggerContainer } from "@/hooks/useScrollAnimation";
 
 const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+  const { ref, isInView } = useScrollAnimation();
 
   const faqs = [
     {
@@ -46,11 +49,17 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="pt-8 pb-16 sm:pt-8 sm:pb-20 lg:pt-8 lg:pb-24 bg-background">
+    <motion.section 
+      className="pt-8 pb-16 sm:pt-8 sm:pb-20 lg:pt-8 lg:pb-24 bg-background"
+      ref={ref}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+      variants={staggerContainer}
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <motion.div className="text-center mb-8" variants={fadeInUp}>
           <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
             <HelpCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary uppercase tracking-wide">FAQ</span>
@@ -63,14 +72,16 @@ const FAQSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Get answers to common questions about our HVAC services, maintenance, and air conditioning solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* FAQ Items */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden"
+              variants={fadeInUp}
+              transition={{ delay: index * 0.1 }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -89,21 +100,26 @@ const FAQSection = () => {
               </button>
               
               {openFAQ === index && (
-                <div className="px-6 pb-5">
+                <motion.div 
+                  className="px-6 pb-5"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="pt-2 border-t border-border/50">
                     <p className="text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        
       </div>
-    </section>
+    </motion.section>
   );
 };
 

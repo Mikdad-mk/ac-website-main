@@ -3,9 +3,12 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>("mission");
+  const { ref, isInView } = useScrollAnimation();
 
   const cards = [
     {
@@ -30,13 +33,20 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-background">
+    <motion.section 
+      id="about" 
+      className="py-16 sm:py-20 lg:py-24 bg-background"
+      ref={ref}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+      variants={staggerContainer}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Content */}
-          <div>
+          <motion.div variants={fadeInLeft}>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-medium text-primary uppercase tracking-wide">About Us</span>
@@ -64,10 +74,10 @@ const AboutSection = () => {
                 Learn More
               </a>
             </Button>
-          </div>
+          </motion.div>
 
           {/* Right Content */}
-          <div className="space-y-4">
+          <motion.div className="space-y-4" variants={fadeInRight}>
             {/* Image */}
             <div className="relative mb-8">
               <img
@@ -79,13 +89,15 @@ const AboutSection = () => {
 
             {/* Expandable Cards */}
             <div className="space-y-4">
-              {cards.map((card) => (
-                <div
+              {cards.map((card, index) => (
+                <motion.div
                   key={card.id}
                   className={`rounded-2xl border transition-all duration-300 ${expandedCard === card.id
-                      ? 'bg-primary text-primary-foreground border-primary'
-                      : 'bg-card border-border hover:border-primary/50'
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'bg-card border-border hover:border-primary/50'
                     }`}
+                  variants={fadeInUp}
+                  transition={{ delay: index * 0.1 }}
                 >
                   <button
                     onClick={() => toggleCard(card.id)}
@@ -102,20 +114,26 @@ const AboutSection = () => {
                   </button>
 
                   {expandedCard === card.id && (
-                    <div className="px-6 pb-6">
+                    <motion.div 
+                      className="px-6 pb-6"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
                       <p className="leading-relaxed opacity-90">
                         {card.content}
                       </p>
-                    </div>
+                    </motion.div>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

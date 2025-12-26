@@ -1,22 +1,57 @@
+'use client'
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut" }
+  };
+
+  const fadeInLeft = {
+    initial: { opacity: 0, x: -60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: "easeOut" }
+  };
+
+  const fadeInRight = {
+    initial: { opacity: 0, x: 60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: "easeOut" }
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
-    <section id="home" className="relative h-screen bg-white overflow-hidden flex items-center justify-center">
+    <motion.section 
+      id="home" 
+      className="relative h-screen bg-white overflow-hidden flex items-center justify-center"
+      initial="initial"
+      animate="animate"
+      variants={staggerContainer}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col justify-start items-center h-full pt-20 pb-8 space-y-6 text-center">
           {/* 1. Badge */}
-          <div className="flex justify-center mt-4">
+          <motion.div className="flex justify-center mt-4" variants={fadeInUp}>
             <span className="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-2.5 rounded-lg uppercase tracking-wide">
               Professional & Reliable
             </span>
-          </div>
+          </motion.div>
 
           {/* 2. Headline and Description */}
-          <div className="space-y-4">
+          <motion.div className="space-y-4" variants={fadeInUp}>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               Expert AC Service and Reliable Climate Control
             </h1>
@@ -24,10 +59,10 @@ const HeroSection = () => {
             <p className="text-muted-foreground text-lg leading-relaxed max-w-lg mx-auto">
               Professional HVAC service designed to keep your home cool and comfortable year-round with expert technicians and quality equipment.
             </p>
-          </div>
+          </motion.div>
 
           {/* 3. Image */}
-          <div className="relative w-full max-w-md">
+          <motion.div className="relative w-full max-w-md" variants={fadeInUp}>
             <div className="relative rounded-3xl overflow-hidden h-[35vh] sm:h-[40vh]">
               <img
                 src="/hero section image.png"
@@ -35,16 +70,13 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
               />
             </div>
-
-            {/* Decorative Elements */}
-
-          </div>
+          </motion.div>
 
           {/* 4. CTA Button */}
-          <div className="flex justify-center">
+          <motion.div className="flex justify-center" variants={fadeInUp}>
             <Button
               size="lg"
-              className="px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary/90 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="px-8 py-4 text-lg font-semibold bg-primary rounded-xl transition-all duration-300"
               asChild
             >
               <a
@@ -57,7 +89,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
-          </div>
+          </motion.div>
 
         </div>
 
@@ -65,7 +97,7 @@ const HeroSection = () => {
         <div className="hidden lg:grid grid-cols-2 gap-12 items-center w-full min-h-[80vh]">
 
           {/* Left Content */}
-          <div className="space-y-8 text-left flex flex-col justify-center">
+          <motion.div className="space-y-8 text-left flex flex-col justify-center" variants={fadeInLeft}>
             {/* Badge */}
             <div className="flex justify-start">
               <span className="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-2.5 rounded-lg uppercase tracking-wide">
@@ -88,7 +120,7 @@ const HeroSection = () => {
             <div className="flex justify-start">
               <Button
                 size="lg"
-                className="px-8 py-4 text-lg font-semibold bg-primary rounded-xl  transition-all "
+                className="px-8 py-4 text-lg font-semibold bg-primary rounded-xl transition-all"
                 asChild
               >
                 <a
@@ -103,29 +135,24 @@ const HeroSection = () => {
               </Button>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Image */}
-          <div className="relative flex items-center justify-end">
+          <motion.div className="relative flex items-center justify-end" variants={fadeInRight}>
             <div className="relative w-full max-w-none">
-              <div className="relative  overflow-hidden h-[65vh]">
+              <div className="relative overflow-hidden h-[65vh]">
                 <img
                   src="/hero section image.png"
                   alt="HVAC Service"
                   className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
                 />
               </div>
-
-
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
-
-
-
-    </section>
+    </motion.section>
   );
 };
 
