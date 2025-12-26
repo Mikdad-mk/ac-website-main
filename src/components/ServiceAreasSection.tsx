@@ -4,13 +4,12 @@ import { MapPin, CheckCircle } from "lucide-react";
 
 const ServiceAreasSection = () => {
   const serviceAreas = [
-    "W/salaamals brother Hibal",
-    "Good ac service",
+    "ac service",
     "Aircon service",
     "Aircond service",
     "Aircond cuci",
     "Nearby aircon service",
-    "Best aircon service",
+    "aircon service",
     "Aircon service KL",
     "Aircond service klang",
     "Klang valley aircon cuci",
@@ -21,12 +20,12 @@ const ServiceAreasSection = () => {
   ];
 
   return (
-    <section id="service-areas" className="py-16 sm:py-24 bg-frost relative">
+    <section id="service-areas" className="py-0 sm:py-16 lg:py-20 bg-frost relative">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
 
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="section-label mb-6 animate-fade-up">
               <MapPin className="w-4 h-4" />
               <span>Service Coverage</span>
@@ -43,7 +42,7 @@ const ServiceAreasSection = () => {
           </div>
 
           {/* Service Areas Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {serviceAreas.map((area, index) => (
               <div
                 key={area}
@@ -57,8 +56,6 @@ const ServiceAreasSection = () => {
               </div>
             ))}
           </div>
-
-
 
         </div>
       </div>

@@ -85,13 +85,13 @@ const TestimonialsSection = () => {
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll-infinite whitespace-nowrap">
               {/* First set of brands */}
-              {["Daikin", "Mitsubishi", "Panasonic", "LG", "Samsung", "Toshiba", "Sharp", "Carrier"].map((brand, index) => (
+              {["AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool"].map((brand, index) => (
                 <div key={`first-${brand}-${index}`} className="inline-flex items-center justify-center min-w-[150px] px-6 text-base sm:text-lg font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors">
                   {brand}
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
-              {["Daikin", "Mitsubishi", "Panasonic", "LG", "Samsung", "Toshiba", "Sharp", "Carrier"].map((brand, index) => (
+              {["AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool", "AirCool"].map((brand, index) => (
                 <div key={`second-${brand}-${index}`} className="inline-flex items-center justify-center min-w-[150px] px-6 text-base sm:text-lg font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors">
                   {brand}
                 </div>
