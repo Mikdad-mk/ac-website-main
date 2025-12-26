@@ -43,8 +43,8 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Button
               variant="hero"
-              size="default"
-              className="px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base font-semibold hover:bg-primary/90 transition-colors"
+              size="sm"
+              className="px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base font-semibold"
               asChild
             >
               <a
@@ -52,7 +52,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get Started
+                Contact us
               </a>
             </Button>
           </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
               <div className="pt-3">
                 <Button
                   variant="hero"
-                  className="w-full py-3 text-sm font-semibold hover:bg-primary/90 transition-colors"
+                  className="w-full py-3 text-sm font-semibold"
                   size="default"
                   asChild
                 >
@@ -93,7 +93,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Get Started
+                    Contact us
                   </a>
                 </Button>
               </div>

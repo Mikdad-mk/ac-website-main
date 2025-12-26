@@ -4,7 +4,6 @@ import { MapPin, CheckCircle } from "lucide-react";
 
 const ServiceAreasSection = () => {
   const serviceAreas = [
-    "ac service",
     "Aircon service",
     "Aircond service",
     "Aircond cuci",

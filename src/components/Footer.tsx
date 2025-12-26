@@ -11,22 +11,15 @@ const Footer = () => {
     { name: "Shop", href: "#" },
   ];
 
-  const utilityPages = [
-    { name: "Style Guide", href: "#" },
-    { name: "Start Here", href: "#" },
-    { name: "Password", href: "#" },
-    { name: "404 Not Found", href: "#" },
-    { name: "Licenses", href: "#" },
-    { name: "Changelog", href: "#" },
-  ];
+
 
   return (
     <footer className="bg-card border-t border-border py-12 lg:py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12">
-          
+
           {/* Brand Section */}
           <div>
             <a href="#home" className="inline-flex items-center gap-2 mb-4 group">
@@ -67,22 +60,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Utility Pages */}
-          <div>
-            <h4 className="font-semibold mb-4 text-foreground">Utility pages</h4>
-            <ul className="space-y-3">
-              {utilityPages.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        
 
           {/* Subscribe */}
           <div>
@@ -94,8 +72,8 @@ const Footer = () => {
                   placeholder="Enter your email"
                   className="flex-1 px-3 py-2 text-sm border border-border rounded-l-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
                 />
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   className="rounded-l-none px-4"
                   asChild
                 >
@@ -116,10 +94,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            Copyright © CoolAir | Designed by <span className="text-primary">HVAC Templates</span> | Powered by <span className="text-primary">WebFlow</span>
+            Copyright © CoolAir | Designed by <span className="text-primary">Hibal Team</span> 
           </p>
         </div>
-        
+
       </div>
     </footer>
   );

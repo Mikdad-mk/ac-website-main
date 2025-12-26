@@ -88,7 +88,7 @@ const HeroSection = () => {
             <div className="flex justify-start">
               <Button
                 size="lg"
-                className="px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary/90 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="px-8 py-4 text-lg font-semibold bg-primary rounded-xl  transition-all "
                 asChild
               >
                 <a
