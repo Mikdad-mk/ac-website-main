@@ -14,7 +14,7 @@ const AboutSection = () => {
       content: "With years of experience in the industry, our team of skilled professionals is dedicated to delivering top HVAC services prioritizing durability, quality, and safety. We take pride in our craftsmanship."
     },
     {
-      id: "vision", 
+      id: "vision",
       title: "Our Vision",
       content: "To be Malaysia's leading HVAC service provider, setting the standard for excellence in air conditioning repair, installation, and maintenance across the region."
     },
@@ -32,9 +32,9 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-16 sm:py-20 lg:py-24 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Content */}
           <div>
             {/* Badge */}
@@ -45,14 +45,14 @@ const AboutSection = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
               Transforming Homes with Quality HVAC Solutions
             </h2>
-            
+
             <p className="text-muted-foreground leading-relaxed mb-8">
-              From repairs to full AC system replacements, we treat each home as our own, providing personalized solutions 
+              From repairs to full AC system replacements, we treat each home as our own, providing personalized solutions
               tailored to meet the unique needs of our clients.
             </p>
 
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="px-8 py-4 text-lg font-semibold"
               asChild
             >
@@ -70,9 +70,9 @@ const AboutSection = () => {
           <div className="space-y-4">
             {/* Image */}
             <div className="relative mb-8">
-              <img 
-                src="public/about image.png"
-                alt=""
+              <img
+                src="/about image.png"
+                alt="HVAC Professional at Work"
                 className="w-full h-80 object-cover rounded-2xl"
               />
             </div>
@@ -80,13 +80,12 @@ const AboutSection = () => {
             {/* Expandable Cards */}
             <div className="space-y-4">
               {cards.map((card) => (
-                <div 
+                <div
                   key={card.id}
-                  className={`rounded-2xl border transition-all duration-300 ${
-                    expandedCard === card.id 
-                      ? 'bg-primary text-primary-foreground border-primary' 
+                  className={`rounded-2xl border transition-all duration-300 ${expandedCard === card.id
+                      ? 'bg-primary text-primary-foreground border-primary'
                       : 'bg-card border-border hover:border-primary/50'
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => toggleCard(card.id)}
@@ -101,7 +100,7 @@ const AboutSection = () => {
                       <ChevronDown className="w-5 h-5 flex-shrink-0" />
                     )}
                   </button>
-                  
+
                   {expandedCard === card.id && (
                     <div className="px-6 pb-6">
                       <p className="leading-relaxed opacity-90">
