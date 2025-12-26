@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Menu, X, Snowflake } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -37,9 +37,13 @@ const Navbar = () => {
             <div className="flex items-center">
               <a href="#home" className="flex items-center gap-3 group">
                 <div className="relative">
-                  <Snowflake className="w-8 h-8 text-primary transition-transform duration-500 group-hover:rotate-180" />
+                  <img 
+                    src="/logo/navbar-logo.png" 
+                    alt="CoolAir Logo" 
+                    className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <span className="text-xl lg:text-2xl font-bold text-foreground">
+                <span className="text-xl lg:text-2xl mt-1 font-bold text-foreground">
                   CoolAir
                 </span>
               </a>

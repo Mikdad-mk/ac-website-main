@@ -215,6 +215,7 @@ export default function RootLayout({
   return (
     <html lang="en-MY">
       <head>
+        <link rel="icon" href="/logo/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

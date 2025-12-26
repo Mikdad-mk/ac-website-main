@@ -1,6 +1,6 @@
 'use client'
 
-import { Snowflake, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useScrollAnimation, fadeInUp, staggerContainer } from "@/hooks/useScrollAnimation";
@@ -51,8 +51,12 @@ const Footer = () => {
           {/* Brand Section */}
           <motion.div className="lg:col-span-1" variants={fadeInUp}>
             <a href="#home" className="inline-flex items-center gap-3 mb-6 group">
-              <Snowflake className="w-8 h-8 text-primary transition-transform duration-500 group-hover:rotate-180" />
-              <span className="text-2xl font-bold text-foreground">CoolAir</span>
+              <img 
+                src="/logo/navbar-logo.png" 
+                alt="CoolAir Logo" 
+                className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
+              />
+              <span className="text-2xl font-bold mt-1 text-foreground">CoolAir</span>
             </a>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Professional HVAC services across Klang Valley. We provide reliable air conditioning solutions with expert technicians and quality equipment.
@@ -168,7 +172,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2024 CoolAir HVAC Services. All rights reserved.
+              © 2025 CoolAir Services. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -177,9 +181,6 @@ const Footer = () => {
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
               </a>
-              <span className="text-sm text-muted-foreground">
-                Designed by <span className="text-primary font-medium">Hibal Team</span>
-              </span>
             </div>
           </div>
         </motion.div>
