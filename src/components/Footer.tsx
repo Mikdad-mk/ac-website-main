@@ -20,7 +20,7 @@ const Footer = () => {
   const services = [
     "AC Installation",
     "AC Repair",
-    "AC Maintenance", 
+    "AC Maintenance",
     "Chemical Wash",
     "Gas Top Up",
     "Emergency Service"
@@ -28,7 +28,7 @@ const Footer = () => {
 
   const serviceAreas = [
     "Petaling Jaya",
-    "Kuala Lumpur", 
+    "Kuala Lumpur",
     "Shah Alam",
     "Subang Jaya",
     "Kota Damansara",
@@ -36,7 +36,7 @@ const Footer = () => {
   ];
 
   return (
-    <motion.footer 
+    <motion.footer
       className="bg-card border-t border-border py-12 lg:py-16"
       ref={ref}
       initial="initial"
@@ -51,9 +51,9 @@ const Footer = () => {
           {/* Brand Section */}
           <motion.div className="lg:col-span-1" variants={fadeInUp}>
             <a href="#home" className="inline-flex items-center gap-3 mb-6 group">
-              <img 
-                src="/logo/navbar-logo.png" 
-                alt="CoolAir Logo" 
+              <img
+                src="/logo/navbar-logo.png"
+                alt="CoolAir Logo"
                 className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
               />
               <span className="text-2xl font-bold mt-1 text-foreground">CoolAir</span>
@@ -61,7 +61,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Professional HVAC services across Klang Valley. We provide reliable air conditioning solutions with expert technicians and quality equipment.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3">
@@ -166,13 +166,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           className="pt-8 border-t border-border"
           variants={fadeInUp}
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2025 CoolAir Services. All rights reserved.
+              © 2025 CoolAir Services. All rights reserved
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
