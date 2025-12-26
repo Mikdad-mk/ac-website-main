@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Homeowner",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     content: "CoolAir transformed our home! The installation was quick, professional, and the new system is incredibly quiet.",
     rating: 5,
   },
@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: "Emily Rodriguez",
     role: "Property Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     content: "Managing 50+ units means constant AC needs. CoolAir's maintenance plan has been a lifesaver.",
     rating: 5,
   },

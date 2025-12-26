@@ -8,6 +8,8 @@ import CTASection from "@/components/CTASection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import ContactSection from "@/components/ContactSection";
+import FAQSection from "@/components/FAQSection";
+import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
         <TestimonialsSection />
         <ServiceAreasSection />
         <ContactSection />
+        <FAQSection />
+        <MapSection />
       </main>
       <Footer />
     </div>
