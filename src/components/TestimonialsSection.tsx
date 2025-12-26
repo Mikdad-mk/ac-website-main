@@ -1,7 +1,6 @@
 'use client'
 
 import { Star } from "lucide-react";
-import { useState } from "react";
 import Image from "next/image";
 
 const testimonials = [
@@ -29,8 +28,6 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <section id="testimonials" className="py-16 sm:py-24 bg-background relative">
       <div className="container mx-auto px-4 sm:px-6">
@@ -85,12 +82,21 @@ const TestimonialsSection = () => {
         {/* Trust Badges */}
         <div className="mt-20 pt-12 border-t border-border">
           <p className="text-center text-sm text-muted-foreground mb-8">Trusted by leading brands</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 lg:gap-16">
-            {["Google", "Brave", "Alchemy", "Solana", "GitHub"].map((brand) => (
-              <div key={brand} className="text-base sm:text-lg font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors">
-                {brand}
-              </div>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll-infinite whitespace-nowrap">
+              {/* First set of brands */}
+              {["Daikin", "Mitsubishi", "Panasonic", "LG", "Samsung", "Toshiba", "Sharp", "Carrier"].map((brand, index) => (
+                <div key={`first-${brand}-${index}`} className="inline-flex items-center justify-center min-w-[150px] px-6 text-base sm:text-lg font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors">
+                  {brand}
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {["Daikin", "Mitsubishi", "Panasonic", "LG", "Samsung", "Toshiba", "Sharp", "Carrier"].map((brand, index) => (
+                <div key={`second-${brand}-${index}`} className="inline-flex items-center justify-center min-w-[150px] px-6 text-base sm:text-lg font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors">
+                  {brand}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
