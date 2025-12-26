@@ -13,7 +13,7 @@ const CTASection = () => {
               Having a problem?
             </h2>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
-              We'll fixed it today!
+              We&apos;ll fixed it today!
             </h3>
             <p className="text-primary-foreground/90 mb-8 leading-relaxed max-w-lg">
               Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation.
