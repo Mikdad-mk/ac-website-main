@@ -50,7 +50,7 @@ const FAQSection = () => {
 
   return (
     <motion.section 
-      className="pt-8 pb-16 sm:pt-8 sm:pb-20 lg:pt-8 lg:pb-24 bg-background"
+      className="pt-4 pb-16 sm:pt-4 sm:pb-20 lg:pt-4 lg:pb-24 bg-background"
       ref={ref}
       initial="initial"
       animate={isInView ? "animate" : "initial"}
