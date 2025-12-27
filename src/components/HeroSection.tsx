@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import HeroImageCarousel from "@/components/HeroImageCarousel";
 
 const HeroSection = () => {
   const fadeInUp = {
@@ -64,11 +65,7 @@ const HeroSection = () => {
           {/* 3. Image */}
           <motion.div className="relative w-full max-w-md" variants={fadeInUp}>
             <div className="relative rounded-3xl overflow-hidden h-[35vh] sm:h-[40vh]">
-              <img
-                src="/hero section image.png"
-                alt="HVAC Service"
-                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
-              />
+              <HeroImageCarousel />
             </div>
           </motion.div>
 
@@ -141,11 +138,7 @@ const HeroSection = () => {
           <motion.div className="relative flex items-center justify-end" variants={fadeInRight}>
             <div className="relative w-full max-w-none">
               <div className="relative overflow-hidden h-[65vh]">
-                <img
-                  src="/hero section image.png"
-                  alt="HVAC Service"
-                  className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
-                />
+                <HeroImageCarousel />
               </div>
             </div>
           </motion.div>

@@ -45,7 +45,7 @@ const Navbar = () => {
                   />
                 </div>
                 <span className="text-xl lg:text-2xl mt-1 font-bold text-foreground">
-                  CoolAir
+                  CoolCare
                 </span>
               </a>
             </div>

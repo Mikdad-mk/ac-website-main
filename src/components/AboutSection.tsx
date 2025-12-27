@@ -81,7 +81,7 @@ const AboutSection = () => {
             {/* Image */}
             <div className="relative mb-8">
               <img
-                src="/about image.png"
+                src="/heroimagelooping/about image.png"
                 alt="HVAC Professional at Work"
                 className="w-full h-80 object-cover rounded-2xl"
               />
