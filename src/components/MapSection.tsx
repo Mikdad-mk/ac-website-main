@@ -87,7 +87,7 @@ const MapSection = () => {
                 <div className="text-muted-foreground text-sm space-y-1">
                   <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
                   <p>Sat: 9:00 AM - 5:00 PM</p>
-                  <p>Sun: Emergency Only</p>
+                  <p>Sun: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
 

@@ -2,13 +2,21 @@
 
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation, fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>("mission");
+  const [isLoaded, setIsLoaded] = useState(false);
   const { ref, isInView } = useScrollAnimation();
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  // Show content immediately on first render
+  const shouldAnimate = isLoaded && isInView;
 
   const cards = [
     {
@@ -38,7 +46,7 @@ const AboutSection = () => {
       className="py-16 sm:py-20 lg:py-24 bg-background"
       ref={ref}
       initial="initial"
-      animate={isInView ? "animate" : "initial"}
+      animate={shouldAnimate ? "animate" : "initial"}
       variants={staggerContainer}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +54,9 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Content */}
-          <motion.div variants={fadeInLeft}>
+          <motion.div 
+            variants={isLoaded ? fadeInLeft : { initial: { opacity: 1 }, animate: { opacity: 1 } }}
+          >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-medium text-primary uppercase tracking-wide">About Us</span>
@@ -77,7 +87,10 @@ const AboutSection = () => {
           </motion.div>
 
           {/* Right Content */}
-          <motion.div className="space-y-4" variants={fadeInRight}>
+          <motion.div 
+            className="space-y-4" 
+            variants={isLoaded ? fadeInRight : { initial: { opacity: 1 }, animate: { opacity: 1 } }}
+          >
             {/* Image */}
             <div className="relative mb-8">
               <img

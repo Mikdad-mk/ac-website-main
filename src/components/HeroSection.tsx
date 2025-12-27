@@ -4,8 +4,15 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import HeroImageCarousel from "@/components/HeroImageCarousel";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -32,6 +39,13 @@ const HeroSection = () => {
     }
   };
 
+  // Show content immediately on first render, then animate
+  const contentVariants = {
+    initial: isLoaded ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: isLoaded ? 0.6 : 0 }
+  };
+
   return (
     <motion.section 
       id="home" 
@@ -45,14 +59,14 @@ const HeroSection = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col justify-start items-center h-full pt-20 pb-8 space-y-6 text-center">
           {/* 1. Badge */}
-          <motion.div className="flex justify-center mt-4" variants={fadeInUp}>
+          <motion.div className="flex justify-center mt-4" variants={contentVariants}>
             <span className="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-2.5 rounded-lg uppercase tracking-wide">
               Professional & Reliable
             </span>
           </motion.div>
 
           {/* 2. Headline and Description */}
-          <motion.div className="space-y-4" variants={fadeInUp}>
+          <motion.div className="space-y-4" variants={contentVariants}>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               Expert AC Service and Reliable Climate Control
             </h1>
@@ -63,14 +77,14 @@ const HeroSection = () => {
           </motion.div>
 
           {/* 3. Image */}
-          <motion.div className="relative w-full max-w-md" variants={fadeInUp}>
+          <motion.div className="relative w-full max-w-md" variants={contentVariants}>
             <div className="relative rounded-3xl overflow-hidden h-[35vh] sm:h-[40vh]">
               <HeroImageCarousel />
             </div>
           </motion.div>
 
           {/* 4. CTA Button */}
-          <motion.div className="flex justify-center" variants={fadeInUp}>
+          <motion.div className="flex justify-center" variants={contentVariants}>
             <Button
               size="lg"
               className="px-8 py-4 text-lg font-semibold bg-primary rounded-xl transition-all duration-300"
@@ -94,7 +108,7 @@ const HeroSection = () => {
         <div className="hidden lg:grid grid-cols-2 gap-12 items-center w-full min-h-[80vh]">
 
           {/* Left Content */}
-          <motion.div className="space-y-8 text-left flex flex-col justify-center" variants={fadeInLeft}>
+          <motion.div className="space-y-8 text-left flex flex-col justify-center" variants={contentVariants}>
             {/* Badge */}
             <div className="flex justify-start">
               <span className="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-2.5 rounded-lg uppercase tracking-wide">
@@ -135,7 +149,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Right Image */}
-          <motion.div className="relative flex items-center justify-end" variants={fadeInRight}>
+          <motion.div className="relative flex items-center justify-end" variants={contentVariants}>
             <div className="relative w-full max-w-none">
               <div className="relative overflow-hidden h-[65vh]">
                 <HeroImageCarousel />
