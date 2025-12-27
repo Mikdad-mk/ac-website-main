@@ -79,7 +79,7 @@ const HeroImageCarousel = () => {
             }
           }}
           alt="HVAC Service"
-          className="absolute inset-0 w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700 cursor-grab active:cursor-grabbing"
+          className="absolute inset-0 w-full h-full object-contain object-center hover:scale-105 transition-transform duration-700 cursor-grab active:cursor-grabbing"
         />
       </AnimatePresence>
 

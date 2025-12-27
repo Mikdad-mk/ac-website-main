@@ -77,7 +77,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* 3. Image */}
-          <motion.div className="relative w-full max-w-md" variants={contentVariants}>
+          <motion.div className="relative w-full max-w-lg" variants={contentVariants}>
             <div className="relative rounded-3xl overflow-hidden h-[35vh] sm:h-[40vh]">
               <HeroImageCarousel />
             </div>
@@ -151,7 +151,7 @@ const HeroSection = () => {
           {/* Right Image */}
           <motion.div className="relative flex items-center justify-end" variants={contentVariants}>
             <div className="relative w-full max-w-none">
-              <div className="relative overflow-hidden h-[65vh]">
+              <div className="relative overflow-hidden h-[65vh] rounded-3xl">
                 <HeroImageCarousel />
               </div>
             </div>
