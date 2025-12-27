@@ -14,17 +14,17 @@ const AboutSection = () => {
     {
       id: "mission",
       title: "Our Mission",
-      content: "With years of experience in the industry, our team of skilled professionals is dedicated to delivering top HVAC services prioritizing durability, quality, and safety. We take pride in our craftsmanship."
+      content: "Dear Valued Client, At the heart of our company is a simple promise: to deliver reliable, high-quality air conditioning service you can trust. We take great pride in the work we do from precise installations to thorough maintenance and prompt repairs. Our experienced technicians are trained to focus on efficiency, comfort, and long-term performance, ensuring your air conditioning system runs smoothly when you need it most."
     },
     {
       id: "vision",
       title: "Our Vision",
-      content: "To be Malaysia's leading HVAC service provider, setting the standard for excellence in air conditioning repair, installation, and maintenance across the region."
+      content: "What truly sets us apart is our commitment to service excellence. We listen to our clients, respond quickly, and never compromise on quality. Your comfort and satisfaction are our top priorities, and every job we complete reflects that commitment."
     },
     {
       id: "values",
       title: "Our Values",
-      content: "We believe in transparency, reliability, and customer satisfaction. Every project is approached with integrity and commitment to delivering exceptional results."
+      content: "We value your trust and look forward to continuing to serve you with professionalism and care."
     }
   ];
 
