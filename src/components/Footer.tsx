@@ -56,7 +56,7 @@ const Footer = () => {
                 alt="CoolAir Logo"
                 className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
               />
-              <span className="text-2xl font-bold mt-1 text-foreground">CoolCare</span>
+              <span className="text-2xl font-bold mt-1 text-foreground">cool care aircon</span>
             </a>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Professional HVAC services across Klang Valley. We provide reliable air conditioning solutions with expert technicians and quality equipment.
