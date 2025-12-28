@@ -107,7 +107,7 @@ const SEOContent = () => {
           <div className="space-y-3 mb-4">
             <div>
               <h4 className="font-semibold text-foreground">How often should I service my air conditioner in Malaysia?</h4>
-              <p className="text-sm">We recommend servicing your aircond every 3-6 months due to Malaysia's tropical climate and dust conditions.</p>
+              <p className="text-sm">We recommend servicing your aircond every 3-6 months due to Malaysia&apos;s tropical climate and dust conditions.</p>
             </div>
             <div>
               <h4 className="font-semibold text-foreground">What is the difference between basic service and chemical wash?</h4>
