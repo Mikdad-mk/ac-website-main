@@ -78,7 +78,7 @@ const HeroImageCarousel = () => {
               paginate(-1);
             }
           }}
-          alt="HVAC Service"
+          alt={`CoolCare Aircon Professional Service ${currentIndex + 1} - Air Conditioner Repair Malaysia`}
           className="absolute inset-0 w-full h-full object-contain object-center hover:scale-105 transition-transform duration-700 cursor-grab active:cursor-grabbing"
         />
       </AnimatePresence>

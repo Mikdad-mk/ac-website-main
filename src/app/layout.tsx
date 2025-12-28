@@ -9,8 +9,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CoolAir - Professional Air Conditioner Service & Repair Malaysia | Petaling Jaya',
-  description: 'Professional air conditioner service, repair & installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair, maintenance & new aircon installation. Call +60 12-274 2875',
+  title: 'CoolCare Aircon - Professional Air Conditioner Service & Repair Malaysia | Petaling Jaya',
+  description: 'Professional air conditioner service, repair & installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair, maintenance & new aircon installation. Basic service from MYR70, Chemical wash MYR130. Call +60 12-274 2875',
   keywords: [
     'air conditioner service Malaysia',
     'aircond repair Petaling Jaya',
@@ -26,41 +26,49 @@ export const metadata: Metadata = {
     'aircond gas top up Malaysia',
     'air conditioner troubleshooting',
     'commercial aircon service',
-    'residential AC repair Malaysia'
+    'residential AC repair Malaysia',
+    'chemical wash aircon Malaysia',
+    'aircond service Kota Damansara',
+    'aircon repair Shah Alam',
+    'aircond cleaning Subang Jaya',
+    'coolcare aircon service',
+    'cheap aircon service Malaysia',
+    'reliable aircond repair',
+    'aircon maintenance Klang Valley'
   ],
-  authors: [{ name: 'CoolAir Malaysia' }],
-  creator: 'CoolAir Professional Services',
-  publisher: 'CoolAir Malaysia',
+  authors: [{ name: 'CoolCare Aircon Malaysia' }],
+  creator: 'CoolCare Aircon Professional Services',
+  publisher: 'CoolCare Aircon Malaysia',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://coolair-malaysia.com'),
+  metadataBase: new URL('https://www.coolcareaircon.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'CoolAir - Professional Air Conditioner Service Malaysia',
-    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service, professional installation & maintenance. Call +60 12-274 2875',
-    url: 'https://coolair-malaysia.com',
-    siteName: 'CoolAir Malaysia',
+    title: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia',
+    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service, professional installation & maintenance. Basic service MYR70, Chemical wash MYR130. Call +60 12-274 2875',
+    url: 'https://www.coolcareaircon.com',
+    siteName: 'CoolCare Aircon Malaysia',
     locale: 'en_MY',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/heroimagelooping/hero section image.png',
         width: 1200,
         height: 630,
-        alt: 'CoolAir - Professional Air Conditioner Service Malaysia',
+        alt: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CoolAir - Professional Air Conditioner Service Malaysia',
-    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service available.',
-    images: ['/og-image.jpg'],
+    title: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia',
+    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service available. Basic service MYR70.',
+    images: ['/heroimagelooping/hero section image.png'],
   },
   robots: {
     index: true,
@@ -95,11 +103,11 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://coolair-malaysia.com/#business",
-        "name": "CoolAir Malaysia",
-        "alternateName": "CoolAir Professional Air Conditioning Services",
-        "description": "Professional air conditioner service, repair and installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair services.",
-        "url": "https://coolair-malaysia.com",
+        "@id": "https://www.coolcareaircon.com/#business",
+        "name": "CoolCare Aircon Malaysia",
+        "alternateName": "CoolCare Professional Air Conditioning Services",
+        "description": "Professional air conditioner service, repair and installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair services. Basic service from MYR70, Chemical wash MYR130.",
+        "url": "https://www.coolcareaircon.com",
         "telephone": "+60122742875",
         "email": "servicecoolcare73@gmail.com",
         "address": {
@@ -175,25 +183,25 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://coolair-malaysia.com/#website",
-        "url": "https://coolair-malaysia.com",
-        "name": "CoolAir Malaysia - Air Conditioner Service & Repair",
+        "@id": "https://www.coolcareaircon.com/#website",
+        "url": "https://www.coolcareaircon.com",
+        "name": "CoolCare Aircon Malaysia - Air Conditioner Service & Repair",
         "description": "Professional air conditioning services in Malaysia",
         "inLanguage": "en-MY",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://coolair-malaysia.com/?s={search_term_string}",
+          "target": "https://www.coolcareaircon.com/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://coolair-malaysia.com/#organization", 
-        "name": "CoolAir Malaysia",
-        "url": "https://coolair-malaysia.com",
+        "@id": "https://www.coolcareaircon.com/#organization", 
+        "name": "CoolCare Aircon Malaysia",
+        "url": "https://www.coolcareaircon.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://coolair-malaysia.com/logo.png",
+          "url": "https://www.coolcareaircon.com/logo/navbar-logo.png",
           "width": 300,
           "height": 100
         },
@@ -222,7 +230,7 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData)
           }}
         />
-        <link rel="canonical" href="https://coolair-malaysia.com" />
+        <link rel="canonical" href="https://www.coolcareaircon.com" />
         <meta name="geo.region" content="MY-10" />
         <meta name="geo.placename" content="Petaling Jaya, Selangor" />
         <meta name="geo.position" content="3.1725;101.5758" />

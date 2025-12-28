@@ -11,6 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
+import SEOContent from "@/components/SEOContent";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <ServiceAreasSection />
         <ContactSection />
         <FAQSection />
+        <SEOContent />
         <MapSection />
       </main>
       <Footer />
