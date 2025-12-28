@@ -9,8 +9,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CoolCare Aircon - Professional Air Conditioner Service & Repair Malaysia | Petaling Jaya',
-  description: 'Professional air conditioner service, repair & installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair, maintenance & new aircon installation. Basic service from MYR70, Chemical wash MYR130. Call +60 12-274 2875',
+  title: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia | Petaling Jaya | Basic Service MYR70',
+  description: 'Professional air conditioner service, repair & installation in Petaling Jaya, Selangor, Malaysia. Basic service from MYR70, Chemical wash MYR130. 24/7 emergency AC repair. First time in Malaysia - 25psi free gas top up. Call +60 12-274 2875',
   keywords: [
     'air conditioner service Malaysia',
     'aircond repair Petaling Jaya',
@@ -34,7 +34,10 @@ export const metadata: Metadata = {
     'coolcare aircon service',
     'cheap aircon service Malaysia',
     'reliable aircond repair',
-    'aircon maintenance Klang Valley'
+    'aircon maintenance Klang Valley',
+    'aircond service near me',
+    'best aircon service Malaysia',
+    'affordable aircond repair'
   ],
   authors: [{ name: 'CoolCare Aircon Malaysia' }],
   creator: 'CoolCare Aircon Professional Services',
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia',
-    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service, professional installation & maintenance. Basic service MYR70, Chemical wash MYR130. Call +60 12-274 2875',
+    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. Basic service MYR70, Chemical wash MYR130. 24/7 emergency service. First time in Malaysia - 25psi free gas top up. Call +60 12-274 2875',
     url: 'https://www.coolcareaircon.com',
     siteName: 'CoolCare Aircon Malaysia',
     locale: 'en_MY',
@@ -67,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'CoolCare Aircon - Professional Air Conditioner Service Malaysia',
-    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. 24/7 emergency service available. Basic service MYR70.',
+    description: 'Expert aircond service & repair in Petaling Jaya, Selangor. Basic service MYR70, Chemical wash MYR130. 24/7 emergency service available.',
     images: ['/heroimagelooping/hero section image.png'],
   },
   robots: {
@@ -106,7 +109,7 @@ export default function RootLayout({
         "@id": "https://www.coolcareaircon.com/#business",
         "name": "CoolCare Aircon Malaysia",
         "alternateName": "CoolCare Professional Air Conditioning Services",
-        "description": "Professional air conditioner service, repair and installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair services. Basic service from MYR70, Chemical wash MYR130.",
+        "description": "Professional air conditioner service, repair and installation in Petaling Jaya, Selangor, Malaysia. 24/7 emergency AC repair services. Basic service from MYR70, Chemical wash MYR130. First time in Malaysia offering 25psi free gas top up.",
         "url": "https://www.coolcareaircon.com",
         "telephone": "+60122742875",
         "email": "servicecoolcare73@gmail.com",
