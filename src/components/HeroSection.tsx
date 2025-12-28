@@ -68,11 +68,11 @@ const HeroSection = () => {
           {/* 2. Headline and Description */}
           <motion.div className="space-y-4" variants={contentVariants}>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
-              CoolCare Aircon Malaysia | Professional Air Conditioner Service from MYR70
+              Expert AC Service and Reliable Climate Control
             </h1>
 
             <p className="text-muted-foreground text-lg leading-relaxed max-w-lg mx-auto">
-              Expert aircond repair, installation & maintenance in Petaling Jaya, Selangor. Basic service MYR70, Chemical wash MYR130. First time in Malaysia - 25psi free gas top up. 24/7 emergency service.
+              Professional HVAC service designed to keep your home cool and comfortable year-round with expert technicians and quality equipment.
             </p>
           </motion.div>
 
@@ -119,11 +119,11 @@ const HeroSection = () => {
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                CoolCare Aircon Malaysia | Professional Air Conditioner Service from MYR70
+                Expert AC Service and Reliable Climate Control
               </h1>
 
               <p className="text-muted-foreground text-xl leading-relaxed max-w-lg">
-                Expert aircond repair, installation & maintenance in Petaling Jaya, Selangor. Basic service MYR70, Chemical wash MYR130. First time in Malaysia - 25psi free gas top up. 24/7 emergency service.
+                Professional HVAC service designed to keep your home cool and comfortable year-round with expert technicians and quality equipment.
               </p>
             </div>
 
