@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'def597a55a63a0a9',
   },
 }
 
@@ -226,6 +226,7 @@ export default function RootLayout({
   return (
     <html lang="en-MY">
       <head>
+        <meta name="google-site-verification" content="def597a55a63a0a9" />
         <link rel="icon" href="/logo/favicon.ico" />
         <script
           type="application/ld+json"
