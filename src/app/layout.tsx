@@ -226,8 +226,23 @@ export default function RootLayout({
   return (
     <html lang="en-MY">
       <head>
-        <meta name="google-site-verification" content="def597a55a63a0a9" />
         <link rel="icon" href="/logo/favicon.ico" />
+        
+        {/* Google Analytics 4 - Replace G-XXXXXXXXXX with your actual Measurement ID */}
+        {/* Uncomment these lines after getting your GA4 Measurement ID
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX');
+            `,
+          }}
+        />
+        */}
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
